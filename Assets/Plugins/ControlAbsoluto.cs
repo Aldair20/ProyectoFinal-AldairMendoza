@@ -27,6 +27,23 @@ public class ContadorCarnes : MonoBehaviour
 	public AudioSource Correct;
 	public AudioSource Bebop;
 	public AudioSource YEEEI;
+	
+	private bool isCollidingWithHitBoxLechuga = false;
+	private bool isCollidingWithHitBoxRefresco = false;
+	private bool isCollidingWithHitBoxQueso = false;
+	private bool isCollidingWithHitBoxCarne = false;
+	private bool isCollidingWithHitBoxCebolla = false;
+	private bool isCollidingWithHitBoxJitomate = false;
+	private bool isCollidingWithHitBoxPapa = false;
+	private bool isCollidingWithHitBoxPuerta = false;
+	
+	private bool isCollidingHitboxIngredienteCarnes = false;
+	private bool isCollidingHitboxIngredienteCebolla= false;
+	private bool isCollidingHitboxIngredienteJitomate= false;
+	private bool isCollidingHitboxIngredienteQueso= false;
+	private bool isCollidingHitboxIngredienteLechuga= false;
+	private bool isCollidingHitboxIngredientePapa= false;
+	private bool isCollidingHitboxIngredienteRefrescos= false;
 
 	
     private bool teclaPresionada = false; // Variable para controlar si ya se presionó una tecla en este frame
@@ -224,6 +241,139 @@ public class ContadorCarnes : MonoBehaviour
 		indiceJugador=0;
 		indiceHamburguesa=0;
     }
+	
+	void OnTriggerEnter(Collider other)
+    {
+        // Verifica si el objeto que colisiona tiene la etiqueta "HitBoxLechuga"
+        if (other.gameObject.tag == "HitBoxLechuga")
+        {
+            // Cambia el estado a true si colisiona con "HitBoxLechuga"
+            isCollidingWithHitBoxLechuga = true;
+        }
+		if (other.gameObject.tag == "RefrescoHitbox")
+        {
+            isCollidingWithHitBoxRefresco = true;
+        }
+		if (other.gameObject.tag == "QuesoHitbox")
+        {
+            isCollidingWithHitBoxQueso = true;
+        }
+		if (other.gameObject.tag == "CarneHitbox")
+        {
+            isCollidingWithHitBoxCarne = true;
+        }
+		if (other.gameObject.tag == "CebollaHitbox")
+        {
+            isCollidingWithHitBoxCebolla = true;
+        }
+		if (other.gameObject.tag == "JitomateHitbox")
+        {
+            isCollidingWithHitBoxJitomate = true;
+        }
+		if (other.gameObject.tag == "PapaHitbox")
+        {
+            isCollidingWithHitBoxPapa = true;
+        }
+		if (other.gameObject.tag == "PuertaHitbox")
+        {
+            isCollidingWithHitBoxPuerta = true;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteCarnes")
+        {
+            isCollidingHitboxIngredienteCarnes = true;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteCebolla")
+        {
+            isCollidingHitboxIngredienteCebolla = true;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteJitomate")
+        {
+            isCollidingHitboxIngredienteJitomate = true;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteQueso")
+        {
+            isCollidingHitboxIngredienteQueso = true;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteLechuga")
+        {
+            isCollidingHitboxIngredienteLechuga = true;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredientePapa")
+        {
+            isCollidingHitboxIngredientePapa = true;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteRefrescos")
+        {
+            isCollidingHitboxIngredienteRefrescos = true;
+        }
+		
+    }
+	
+	void OnTriggerExit(Collider other)
+    {
+        // Verifica si el objeto que deja de colisionar tiene la etiqueta "HitBoxLechuga"
+        if (other.gameObject.tag == "HitBoxLechuga")
+        {
+            // Cambia el estado a false si deja de colisionar con "HitBoxLechuga"
+            isCollidingWithHitBoxLechuga = false;
+        }
+		if (other.gameObject.tag == "RefrescoHitbox")
+        {
+            isCollidingWithHitBoxRefresco = false;
+        }
+		if (other.gameObject.tag == "QuesoHitbox")
+        {
+            isCollidingWithHitBoxQueso = false;
+        }
+		if (other.gameObject.tag == "CarneHitbox")
+        {
+            isCollidingWithHitBoxCarne = false;
+        }
+		if (other.gameObject.tag == "CebollaHitbox")
+        {
+            isCollidingWithHitBoxCebolla = false;
+        }
+		if (other.gameObject.tag == "JitomateHitbox")
+        {
+            isCollidingWithHitBoxJitomate = false;
+        }
+		if (other.gameObject.tag == "PapaHitbox")
+        {
+            isCollidingWithHitBoxPapa = false;
+        }
+		if (other.gameObject.tag == "PuertaHitbox")
+        {
+            isCollidingWithHitBoxPuerta = false;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteCarnes")
+        {
+            isCollidingHitboxIngredienteCarnes = false;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteCebolla")
+        {
+            isCollidingHitboxIngredienteCebolla = false;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteJitomate")
+        {
+            isCollidingHitboxIngredienteJitomate = false;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteQueso")
+        {
+            isCollidingHitboxIngredienteQueso = false;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteLechuga")
+        {
+            isCollidingHitboxIngredienteLechuga = false;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredientePapa")
+        {
+            isCollidingHitboxIngredientePapa = false;
+        }
+		if (other.gameObject.tag == "isCollidingHitboxIngredienteRefrescos")
+        {
+            isCollidingHitboxIngredienteRefrescos = false;
+        }
+	}
 
 	IEnumerator RealizarSecuencia()
     {
@@ -362,8 +512,7 @@ public class ContadorCarnes : MonoBehaviour
         condicionCumplida = false;
 		// Consumo de alimentos al dar click
         // Verificar si se ha detectado alguna entrada (tecla, botón o toque) y la rotación es la deseada
-        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable &&
-            rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f && rotacionPlayer.y >= 327.39f && rotacionPlayer.y <= 339.67f)
+        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && isCollidingWithHitBoxCarne)
         {
             // Reducir el contador si es mayor que 0
             if (ingredienteCarnes > 0)
@@ -447,9 +596,7 @@ public class ContadorCarnes : MonoBehaviour
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
 		// Verificar si se ha detectado alguna entrada (tecla, botón o toque) y la rotación es la deseada
-        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable &&
-            rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f &&
-            rotacionPlayer.y >= 20.77f && rotacionPlayer.y <= 33.9f)
+        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && isCollidingWithHitBoxCebolla)
         {
             // Reducir el contador si es mayor que 0
             if (ingredienteCebolla > 0)
@@ -537,7 +684,7 @@ public class ContadorCarnes : MonoBehaviour
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
 		// Verificar si se ha detectado alguna entrada (tecla, botón o toque) y la rotación es la deseada
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f && rotacionPlayer.y >= 39.9f && rotacionPlayer.y <= 51.31f) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && isCollidingWithHitBoxJitomate) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
         {
             // Reducir el contador si es mayor que 0
             if (ingredienteJitomate > 0)
@@ -625,7 +772,7 @@ public class ContadorCarnes : MonoBehaviour
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
 		// Verificar si se ha detectado alguna entrada (tecla, botón o toque) y la rotación es la deseada
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && rotacionPlayer.x >= 14.7f && rotacionPlayer.x <= 25.7f && rotacionPlayer.y >= 290.18f && rotacionPlayer.y <= 305.0f) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && isCollidingWithHitBoxLechuga) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
         {
             // Reducir el contador si es mayor que 0
             if (ingredienteLechuga > 0)
@@ -713,7 +860,7 @@ public class ContadorCarnes : MonoBehaviour
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
 		// Verificar si se ha detectado alguna entrada (tecla, botón o toque) y la rotación es la deseada
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f && rotacionPlayer.y >= 57.4f && rotacionPlayer.y <= 70.4f) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && isCollidingWithHitBoxPapa) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
         {
             // Reducir el contador si es mayor que 0
             if (ingredientePapa > 0)
@@ -784,7 +931,7 @@ public class ContadorCarnes : MonoBehaviour
 
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f && rotacionPlayer.y >= 308.6f && rotacionPlayer.y <= 321.76f) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && isCollidingWithHitBoxQueso) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
         {
             // Reducir el contador si es mayor que 0
             if (ingredienteQueso > 0)
@@ -872,9 +1019,7 @@ public class ContadorCarnes : MonoBehaviour
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
 		// Verificar si se ha detectado alguna entrada (tecla, botón o toque) y la rotación es la deseada
-        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable &&
-            rotacionPlayer.x >= 3.0f && rotacionPlayer.x <= 20.2f &&
-            rotacionPlayer.y >= 75.94f && rotacionPlayer.y <= 87.2f)
+        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && isCollidingWithHitBoxRefresco)
         {
             // Reducir el contador si es mayor que 0
             if (ingredienteRefrescos > 0)
@@ -930,48 +1075,50 @@ public class ContadorCarnes : MonoBehaviour
 		}
 		ActualizarIndicadorPasos();
 		// Refrigerador
-        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 7.58f && rotacionPlayer.x <= 17.93f && rotacionPlayer.y >= 213.75f && rotacionPlayer.y <= 220.5f)
+        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCarnes)
         {
             // Reinicia el contador a 10
 			ingredienteCarnes = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 338.1f && rotacionPlayer.x <= 348.3f && rotacionPlayer.y >= 200.0f && rotacionPlayer.y <= 207.5f)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCebolla)
         {
-            // Reinicia el contador a 10
+            // Reinicia el contador a 10 
 			ingredienteCebolla = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && ((rotacionPlayer.x >= 0.0f && rotacionPlayer.x <= 1.0f) || (rotacionPlayer.x >= 351.5f && rotacionPlayer.x < 360.0f)) && rotacionPlayer.y >= 199.3f && rotacionPlayer.y <= 207.5f)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteJitomate)
         {
             // Reinicia el contador a 10
 			ingredienteJitomate = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && ((rotacionPlayer.x >= 0.0f && rotacionPlayer.x <= 1.0f) || (rotacionPlayer.x >= 351.5f && rotacionPlayer.x < 360.0f)) && rotacionPlayer.y >= 211.63f && rotacionPlayer.y <= 219.3f)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteQueso)
         {
             // Reinicia el contador a 10
 			ingredienteQueso = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 338.1f && rotacionPlayer.x <= 348.3f && rotacionPlayer.y >= 213.0f && rotacionPlayer.y <= 220.7f)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteLechuga)
         {
             // Reinicia el contador a 10
 			ingredienteLechuga = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 7.7f && rotacionPlayer.x <= 18.0f && rotacionPlayer.y >= 199.4f && rotacionPlayer.y <= 206.9f)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredientePapa)
         {
             // Reinicia el contador a 10
 			ingredientePapa = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 22.0f && rotacionPlayer.x <= 27.0f && rotacionPlayer.y >= 201.46f && rotacionPlayer.y <= 217.1f)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteRefrescos)
         {
             // Reinicia el contador a 10
 			ingredienteRefrescos = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
+		
+		
         // Iterar sobre cada objeto de Carnes desde el final del arreglo
         for (int i = 9; i >= 0; i--)
         {
@@ -1016,7 +1163,7 @@ public class ContadorCarnes : MonoBehaviour
         }
 		
 		// Animacion de puerta del Refri
-        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable &&((rotacionPlayer.x >= 330.9f && rotacionPlayer.x <= 359.999f) || (rotacionPlayer.x >= 0.0f && rotacionPlayer.x <= 30.0f)) && rotacionPlayer.y >= 195.55f && rotacionPlayer.y <= 224.3f)
+        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && isCollidingWithHitBoxPuerta)
         {
             // Rotar la puerta del refrigerador desde 360 a 238 en el eje Y
             if (!puertaAbierta)
@@ -1043,21 +1190,21 @@ public class ContadorCarnes : MonoBehaviour
         // Reiniciar la variable teclaPresionada al final de cada frame
         teclaPresionada = false;
 		//LUZ VERDE
-        if (tiempoJugable && jugable && rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f && rotacionPlayer.y >= 327.39f && rotacionPlayer.y <= 339.67f)
+        if (tiempoJugable && jugable && isCollidingWithHitBoxCarne)
         {
             if (ingredienteCarnes > 0)
             {
                 condicionCumplida = true;
             }
         }
-        if (tiempoJugable && jugable && rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f && rotacionPlayer.y >= 20.77f && rotacionPlayer.y <= 33.9f)
+        if (tiempoJugable && jugable && isCollidingWithHitBoxCebolla)
         {
             if (ingredienteCebolla > 0)
             {
 				condicionCumplida = true;
             }
         }
-		if (tiempoJugable && jugable && rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f && rotacionPlayer.y >= 39.9f && rotacionPlayer.y <= 51.31f) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
+		if (tiempoJugable && jugable && isCollidingWithHitBoxJitomate) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
         {
             if (ingredienteJitomate > 0)
             {
@@ -1065,63 +1212,59 @@ public class ContadorCarnes : MonoBehaviour
             }
 
         }
-		if (tiempoJugable && jugable && rotacionPlayer.x >= 14.7f && rotacionPlayer.x <= 25.7f && rotacionPlayer.y >= 290.18f && rotacionPlayer.y <= 305.0f) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
+		if (tiempoJugable && jugable && isCollidingWithHitBoxLechuga) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
         {
             if (ingredienteLechuga > 0)
             {
 				condicionCumplida = true;
             }
         }
-		if (tiempoJugable && jugable && rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f && rotacionPlayer.y >= 57.4f && rotacionPlayer.y <= 70.4f) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
+		if (tiempoJugable && jugable && isCollidingWithHitBoxPapa) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
         {
             if (ingredientePapa > 0)
             {
 				condicionCumplida = true;
             }
         }
-		if (tiempoJugable && jugable && rotacionPlayer.x >= 14.5f && rotacionPlayer.x <= 25.4f && rotacionPlayer.y >= 308.6f && rotacionPlayer.y <= 321.76f) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
+		if (tiempoJugable && jugable && isCollidingWithHitBoxQueso) // Detecta cualquier tecla presionada y que no haya sido presionada en este frame
         {
             if (ingredienteQueso > 0)
             {
 				condicionCumplida = true;
             }
         }
-        if (tiempoJugable && jugable && rotacionPlayer.x >= 3.0f && rotacionPlayer.x <= 20.2f && rotacionPlayer.y >= 75.94f && rotacionPlayer.y <= 87.2f)
+        if (tiempoJugable && jugable && isCollidingWithHitBoxRefresco)
         {
             if (ingredienteRefrescos > 0)
             {
 				condicionCumplida = true;
             }
         }
-        if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 7.58f && rotacionPlayer.x <= 17.93f && rotacionPlayer.y >= 213.75f && rotacionPlayer.y <= 220.5f)
+        if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCarnes)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 338.1f && rotacionPlayer.x <= 348.3f && rotacionPlayer.y >= 200.0f && rotacionPlayer.y <= 207.5f)
+		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCebolla)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && ((rotacionPlayer.x >= 0.0f && rotacionPlayer.x <= 1.0f) || (rotacionPlayer.x >= 351.5f && rotacionPlayer.x < 360.0f)) && rotacionPlayer.y >= 199.3f && rotacionPlayer.y <= 207.5f)
+		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteJitomate)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && ((rotacionPlayer.x >= 0.0f && rotacionPlayer.x <= 1.0f) || (rotacionPlayer.x >= 351.5f && rotacionPlayer.x < 360.0f)) && rotacionPlayer.y >= 211.63f && rotacionPlayer.y <= 219.3f)
+		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteQueso)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 338.1f && rotacionPlayer.x <= 348.3f && rotacionPlayer.y >= 213.0f && rotacionPlayer.y <= 220.7f)
+		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteLechuga)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 7.7f && rotacionPlayer.x <= 18.0f && rotacionPlayer.y >= 199.4f && rotacionPlayer.y <= 206.9f)
+		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredientePapa)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && rotacionPlayer.x >= 22.0f && rotacionPlayer.x <= 27.0f && rotacionPlayer.y >= 201.46f && rotacionPlayer.y <= 217.1f)
-        {
-            condicionCumplida = true;
-        }
-        if (tiempoJugable && !puertaAbierta  && jugable &&((rotacionPlayer.x >= 330.9f && rotacionPlayer.x <= 359.999f) || (rotacionPlayer.x >= 0.0f && rotacionPlayer.x <= 30.0f)) && rotacionPlayer.y >= 195.55f && rotacionPlayer.y <= 224.3f)
+		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteRefrescos)
         {
             condicionCumplida = true;
         }
