@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Cocina.unity
+    guid: 040e9be6bd18525458cc67c890e49913
+  - enabled: 1
+    path: Assets/Scenes/Resultados.unity
+    guid: 5290b837b987b714fb0abf22b01486f9
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7a04b106ff6ed7c41a2c7a9c5952fba1, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 12185191f3c50c1479491c93ff99ec94, type: 2}
