@@ -4,7 +4,7 @@ using TMPro;
 public class Cronometro : MonoBehaviour
 {
     public TextMeshProUGUI textoCronometro;
-    private float tiempoInicial = 300.0f; 
+    private float tiempoInicial = 60.0f; 
     private float tiempoRestante;
     public AudioSource SountrackNormal;
     public AudioSource SountrackAcelerado;

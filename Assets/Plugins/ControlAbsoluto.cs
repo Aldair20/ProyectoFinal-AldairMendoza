@@ -136,7 +136,7 @@ public class ContadorCarnes : MonoBehaviour
 	public GameObject objetoAControlar; // Variable para almacenar el objeto que se va a activar y desactivar
 	private bool condicionCumplida = false; // Variable para controlar si se ha cumplido alguna condición
 	
-	private float tiempoInicial = 307; // 5 minutos y 5 segundos
+	private float tiempoInicial = 67; // 5 minutos y 5 segundos
 	private float tiempoTranscurrido = 0f;
     private bool tiempoJugable = true;
 
