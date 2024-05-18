@@ -1163,7 +1163,7 @@ public class ContadorCarnes : MonoBehaviour
         }
 		
 		// Animacion de puerta del Refri
-        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && isCollidingWithHitBoxPuerta)
+        if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && isCollidingWithHitBoxPuerta)
         {
             // Rotar la puerta del refrigerador desde 360 a 238 en el eje Y
             if (!puertaAbierta)
@@ -1267,6 +1267,10 @@ public class ContadorCarnes : MonoBehaviour
 		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteRefrescos)
         {
             condicionCumplida = true;
+        }
+		if (tiempoJugable && isCollidingWithHitBoxPuerta && !puertaAbierta)
+        {
+			condicionCumplida = true;
         }
         objetoAControlar.SetActive(condicionCumplida);
     }
