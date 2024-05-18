@@ -3,7 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Carnes
+  - Queso
+  - Lechuga
+  - Refrescos
+  - HitBoxLechuga
+  - RefrescoHitbox
+  - QuesoHitbox
+  - CarneHitbox
+  - CebollaHitbox
+  - JitomateHitbox
+  - PapaHitbox
+  - isCollidingHitboxIngredienteRefrescos
+  - isCollidingHitboxIngredienteJitomate
+  - isCollidingHitboxIngredienteQueso
+  - isCollidingHitboxIngredientePapa
+  - isCollidingHitboxIngredienteLechuga
+  - isCollidingHitboxIngredienteCarnes
+  - isCollidingHitboxIngredienteCebolla
   layers:
   - Default
   - TransparentFX
