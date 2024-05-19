@@ -1081,37 +1081,37 @@ public class ContadorCarnes : MonoBehaviour
 			ingredienteCarnes = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCebolla)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCebolla)
         {
             // Reinicia el contador a 10 
 			ingredienteCebolla = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteJitomate)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteJitomate)
         {
             // Reinicia el contador a 10
 			ingredienteJitomate = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteQueso)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteQueso)
         {
             // Reinicia el contador a 10
 			ingredienteQueso = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteLechuga)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteLechuga)
         {
             // Reinicia el contador a 10
 			ingredienteLechuga = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredientePapa)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredientePapa)
         {
             // Reinicia el contador a 10
 			ingredientePapa = 10;
             teclaPresionada = true; // Marcar que se ha presionado una tecla en este frame
         }
-		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteRefrescos)
+		if (tiempoJugable && Input.anyKeyDown && !teclaPresionada  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteRefrescos)
         {
             // Reinicia el contador a 10
 			ingredienteRefrescos = 10;
@@ -1240,31 +1240,31 @@ public class ContadorCarnes : MonoBehaviour
 				condicionCumplida = true;
             }
         }
-        if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCarnes)
+        if (tiempoJugable  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCarnes)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCebolla)
+		if (tiempoJugable  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteCebolla)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteJitomate)
+		if (tiempoJugable  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteJitomate)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteQueso)
+		if (tiempoJugable  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteQueso)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteLechuga)
+		if (tiempoJugable  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteLechuga)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredientePapa)
+		if (tiempoJugable  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredientePapa)
         {
             condicionCumplida = true;
         }
-		if (tiempoJugable && jugable && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteRefrescos)
+		if (tiempoJugable  && puertaAbierta && rotacionRefri.y <= 265.0f && isCollidingHitboxIngredienteRefrescos)
         {
             condicionCumplida = true;
         }

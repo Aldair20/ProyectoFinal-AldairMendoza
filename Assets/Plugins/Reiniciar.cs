@@ -5,20 +5,11 @@ public class ButtonToInicio : MonoBehaviour
 {
     void Update()
     {
-        // Verificar si se presiona cualquier tecla
+        // Verificar si se ha presionado cualquier botón del mando
         if (Input.anyKeyDown)
         {
-            // Esperar a que se suelte el botón
-            StartCoroutine(WaitForButtonRelease());
+            // Cambiar a la escena "Inicio"
+            SceneManager.LoadScene("Inicio");
         }
-    }
-
-    private System.Collections.IEnumerator WaitForButtonRelease()
-    {
-        // Esperar a que se suelte el botón
-        yield return new WaitUntil(() => Input.anyKey == false);
-
-        // Transportar a la escena "Inicio"
-        SceneManager.LoadScene("Inicio");
     }
 }
