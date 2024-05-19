@@ -1037,8 +1037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e153bd5955b4e624481e5aff5d8e9e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToActivate: {fileID: 1852806615}
-  objectToDeactivate: {fileID: 413612346}
+  objetoDesactivar: {fileID: 413612346}
+  objetoActivar: {fileID: 1852806615}
 --- !u!1 &1852806615
 GameObject:
   m_ObjectHideFlags: 0
