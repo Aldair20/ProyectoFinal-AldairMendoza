@@ -22,6 +22,7 @@ TagManager:
   - isCollidingHitboxIngredienteLechuga
   - isCollidingHitboxIngredienteCarnes
   - isCollidingHitboxIngredienteCebolla
+  - PuertaHitbox
   layers:
   - Default
   - TransparentFX
